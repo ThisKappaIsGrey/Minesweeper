@@ -58,13 +58,15 @@ public void draw ()
 public boolean isWon()
 {
     //your code here
-    // for(int r = 0; r < buttons.length; r++){
-    //   for(int c = 0; c < buttons[r].length; c++){
-    //     if(!bombs.contains(buttons[r][c]) && buttons[r][c].isClicked()){
-    //       return true;
-    //     }
-    //   }
-    // }
+    int count  = 0;
+    for(int r = 0; r < buttons.length; r++){
+      for(int c = 0; c < buttons[r].length; c++){
+        if(!bombs.contains(buttons[r][c]) && buttons[r][c].isClicked()){
+          count++;
+        }
+      }
+    }
+    if(count == (400 - bombs.size())) return true;
     return false;
 }
 public void displayLosingMessage()
