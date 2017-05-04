@@ -153,7 +153,7 @@ public class MSButton
         else if(bombs.contains(this))
           lost = true;
         else if(countBombs(r, c) > 0)
-          label = Integer.toString(countBombs(r, c));
+          label = "" + countBombs(r, c);
         else{
           if(isValid(r+1, c) && !buttons[r+1][c].isClicked())
           buttons[r+1][c].mousePressed();
